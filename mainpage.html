@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+</head>
+
+<!-- 레이아웃 크기는 %나 auto 이용할 것 -->
+<!-- 남색 171a21-->
+
+<body>
+    <style>
+        * {
+            background-color: #333333;
+        }
+        #TITLE{
+            white-space: nowrap;
+            width:20%;
+            overflow: hidden;
+            float:left;
+        }
+
+        #LOGO{
+            width:100px;
+            height:50px;
+            margin-left:50px;
+            margin-bottom:30px;
+            padding:20px;
+
+            float:left;
+            background-image: url("pineapple2.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: right;
+
+
+        }
+
+        #SITE_NAME{
+            width:140px;
+            margin-bottom:30px;
+            margin-left:10px;
+            margin-right:10px;
+            height : 90px;
+
+            float:left;
+            color : aliceblue;
+            text-align : left;
+        }
+
+        #CATEROGIES{
+            width:80%;
+            margin-top:40px;
+            margin-bottom:30px;
+            color : aliceblue;
+            font-family: "Calibri Light";
+            font-size:22px;
+            float:right;
+
+        }
+
+        #SEARCH_BAR{
+            width:300px;
+            margin-bottom:30px;
+            margin-left:50px;
+            height:20px;
+            padding:0px;
+            border:1px solid #bcbcbc;
+            float:left;
+            clear:both;
+            color : aliceblue;
+        }
+
+        #LOGIN_BOX{
+            width:300px;
+            margin-bottom:30px;
+            margin-left:50px;
+            padding:0px;
+            border:1px solid #bcbcbc;
+            float:left;
+            clear:both;
+            color : aliceblue;
+        }
+
+        #SIDE_BAR{
+            width:300px;
+            margin-top:0px;
+            margin-left:50px;
+            margin-bottom:30px;
+            padding:0px;
+            height:500px;
+            border:1px solid #bcbcbc;
+            float:left;
+            clear:both;
+            color : aliceblue;
+        }
+
+
+
+        /*#MOVING_SCREEN_2{
+            width:1000px;
+            height:270px;
+            margin-top:20px;
+            margin-right:410px;
+            float:right;
+            padding:20px;
+            border:1px solid #bcbcbc;
+            color : aliceblue;
+
+        }*/
+
+        #LEFT_SIDE{
+            float:left;
+            clear:both;
+        }
+
+        #RIGHT_SIDE{
+            float:left;
+        }
+
+        /* logo */
+        .TITLE .LOGO img{
+            width:auto;
+            height:50px;
+            object-fit: cover;
+        }
+
+        /* link */
+        a:link{
+            color:#767676;
+            text-decoration:none;
+        }
+        a:hover{
+            color:white;
+        }
+        a:visited{
+            color:#767676;
+        }
+
+        .MOVING_SCREEN input[id*="slide"]{display:none;} /* INPUT 가리기 적용*/
+
+        .MOVING_SCREEN .slidewrap {max-width:1200px;margin:0 auto;overflow:hidden;}
+        .MOVING_SCREEN .slidelist {white-space:nowrap;font-size:0;}/* 세 슬라이드가 가로로 쭉 붙고 뒤 슬라이드는 가려짐 */
+        .MOVING_SCREEN .slidelist > li {display:inline-block;vertical-align:middle;width:100%;transition:all .5s;}/* 슬라이드 빠르기 */
+        .MOVING_SCREEN .slidelist > li > a{display:block;position:relative;}
+        .MOVING_SCREEN .slidelist > li > a img{width:100%;}
+
+
+        .MOVING_SCREEN .slidelist label{position:absolute;z-index:1;top:50%;transform:translateY(-50%);padding:50px;cursor:pointer;}/* 슬라이드 넘기는 click 버튼 */
+        .MOVING_SCREEN .slidelist .left{left:30px;background:url("left.png") center center / 100% no-repeat;} /* 슬라이드 넘기는 click 버튼 */
+        .MOVING_SCREEN .slidelist .right{right:30px;background:url("right.png") center center / 100% no-repeat;}
+
+        .MOVING_SCREEN input[id="slide1"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);} /* 화살표 click 효과 */
+        .MOVING_SCREEN input[id="slide2"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);} /* 화살표 click 효과 */
+        .MOVING_SCREEN input[id="slide3"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);} /* 화살표 click 효과 */
+    </style>
+
+
+
+
+
+
+    <div id="TITLE">
+        <div id="LOGO"></div>
+
+        <div id="SITE_NAME">
+            <br>
+            <br>
+            <a style="font-family: 'Calibri Light'; font-size:25px; color:white; font-weight:bold" href="mainpage.html"> PINEAPPLE </a>
+        </div>
+    </div>
+
+    <div id="CATEROGIES">
+        <span id="MY_PAGE">
+            <a href="MY_PAGE.html" style="font-weight: bold"> My Page &nbsp&nbsp </a>
+        </span>
+        <span id="MY_GAMES">
+            <a href="MY_GAMES.html" style="font-weight: bold"> My Games &nbsp&nbsp</a>
+        </span>
+        <span id="COMMUNITY">
+            <a href="COMMUNITY.html" style="font-weight: bold"> Community &nbsp&nbsp</a>
+        </span>
+        <span id="SUPPORT">
+            <a href="SUPPORT.html" style="font-weight: bold"> Support &nbsp&nbsp</a>
+        </span>
+    </div>
+
+    <div id="LEFT_SIDE">
+        <div id="SEARCH_BAR">
+            SEARCH_BAR
+        </div>
+        <div id="LOGIN_BOX">
+            <div id="ID">
+                <p>ID</p>
+            </div>
+            <div id="PW">
+                <p>PW</p>
+            </div>
+        </div>
+
+        <div id="SIDE_BAR">
+            <div id="LIVE_SEARCH">
+                <p>LIVE_SEARCH</p>
+            </div>
+            <div id="GAME_RANKING">
+                <p>GAME_RANKING</p>
+            </div>
+            <div id="SALE_GAME">
+                <p>SALE_GAME</p>
+            </div>
+
+            <div id="ETC....">
+                <p>ETC....</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="RIGHT_SIDE">
+        <div class="MOVING_SCREEN">
+            <input type="radio" name="slide" id="slide1" checked>
+            <input type="radio" name="slide" id="slide2">
+            <input type="radio" name="slide" id="slide3">
+
+            <div class="slidewrap">
+                <ul class="slidelist">
+                    <li>
+                        <a>
+                            <label for="slide3" class="left"></label>
+                            <img src="zzslide1.jpg">
+                            <label for="slide2" class="right"></label>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <label for="slide1" class="left"></label>
+                            <img src="zzslide2.jpg">
+                            <label for="slide3" class="right"></label>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <label for="slide2" class="left"></label>
+                            <img src="zzslide3.jpg">
+                            <label for="slide1" class="right"></label>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+
+
+
+        <div id="MOVING_SCREEN_2">
+            <!--<p>MOVING_SCREEN_2</p>-->
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
