@@ -26,14 +26,11 @@
             margin-left:50px;
             margin-bottom:30px;
             padding:20px;
-
             float:left;
             background-image: url("pineapple2.png");
             background-repeat: no-repeat;
             background-size: contain;
             background-position: right;
-
-
         }
 
         #SITE_NAME{
@@ -42,23 +39,27 @@
             margin-left:10px;
             margin-right:10px;
             height : 90px;
-
             float:left;
             color : aliceblue;
             text-align : left;
         }
 
         #CATEROGIES{
-            width:80%;
+            width:60%;
             margin-top:40px;
             margin-bottom:30px;
             color : aliceblue;
             font-family: "Calibri Light";
             font-size:22px;
-            float:right;
-
+            float:left;
         }
-
+        #CLIENT{
+            width:20%;
+            color : white;
+            font-family: "Calibri Light";
+            font-size:22px;
+            float:right;
+        }
         #SEARCH_BAR{
             width:300px;
             margin-bottom:30px;
@@ -71,47 +72,11 @@
             color : aliceblue;
         }
 
-        #LOGIN_BOX{
-            width:300px;
-            margin-bottom:30px;
-            margin-left:50px;
-            padding:0px;
-            border:1px solid #bcbcbc;
-            float:left;
-            clear:both;
-            color : aliceblue;
-        }
-
-        #SIDE_BAR{
-            width:300px;
-            margin-top:0px;
-            margin-left:50px;
-            margin-bottom:30px;
-            padding:0px;
-            height:500px;
-            border:1px solid #bcbcbc;
-            float:left;
-            clear:both;
-            color : aliceblue;
-        }
-
-
-
-        /*#MOVING_SCREEN_2{
-            width:1000px;
-            height:270px;
-            margin-top:20px;
-            margin-right:410px;
-            float:right;
-            padding:20px;
-            border:1px solid #bcbcbc;
-            color : aliceblue;
-
-        }*/
 
         #LEFT_SIDE{
             float:left;
             clear:both;
+            margin-top:70px;
         }
 
         #RIGHT_SIDE{
@@ -139,12 +104,11 @@
 
         .MOVING_SCREEN input[id*="slide"]{display:none;} /* INPUT 가리기 적용*/
 
-        .MOVING_SCREEN .slidewrap {max-width:1200px;margin:0 auto;overflow:hidden;}
+        .MOVING_SCREEN .slidewrap {max-width:1280px;margin:0 auto;overflow:hidden;}
         .MOVING_SCREEN .slidelist {white-space:nowrap;font-size:0;}/* 세 슬라이드가 가로로 쭉 붙고 뒤 슬라이드는 가려짐 */
         .MOVING_SCREEN .slidelist > li {display:inline-block;vertical-align:middle;width:100%;transition:all .5s;}/* 슬라이드 빠르기 */
         .MOVING_SCREEN .slidelist > li > a{display:block;position:relative;}
         .MOVING_SCREEN .slidelist > li > a img{width:100%;}
-
 
         .MOVING_SCREEN .slidelist label{position:absolute;z-index:1;top:50%;transform:translateY(-50%);padding:50px;cursor:pointer;}/* 슬라이드 넘기는 click 버튼 */
         .MOVING_SCREEN .slidelist .left{left:30px;background:url("left.png") center center / 100% no-repeat;} /* 슬라이드 넘기는 click 버튼 */
@@ -153,11 +117,38 @@
         .MOVING_SCREEN input[id="slide1"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);} /* 화살표 click 효과 */
         .MOVING_SCREEN input[id="slide2"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);} /* 화살표 click 효과 */
         .MOVING_SCREEN input[id="slide3"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);} /* 화살표 click 효과 */
+
+        .MOVING_SCREEN_2 {
+            position:relative;
+            width:100%;
+            padding-bottom:56.25%;
+        }
+
+        /* 유튜브 화면 */
+        .MOVING_SCREEN_2 iframe{
+            position:absolute;
+            width:100%;
+            height:100%;
+            margin-left:40px;
+        }
+        /* 사이드바 */
+        div[class="SIDE_BAR"]{
+            width:300px;
+            height:100%;
+            background:#333333;
+            position:static;
+            top:0;
+            z-index: 1;
+            clear:both;
+            margin-left:50px;
+            text-align:right;
+        }
+
+
+
+
+
     </style>
-
-
-
-
 
 
     <div id="TITLE">
@@ -171,57 +162,48 @@
     </div>
 
     <div id="CATEROGIES">
-        <span id="MY_PAGE">
-            <a href="MY_PAGE.html" style="font-weight: bold"> My Page &nbsp&nbsp </a>
-        </span>
-        <span id="MY_GAMES">
-            <a href="MY_GAMES.html" style="font-weight: bold"> My Games &nbsp&nbsp</a>
-        </span>
-        <span id="COMMUNITY">
-            <a href="COMMUNITY.html" style="font-weight: bold"> Community &nbsp&nbsp</a>
-        </span>
-        <span id="SUPPORT">
-            <a href="SUPPORT.html" style="font-weight: bold"> Support &nbsp&nbsp</a>
-        </span>
+        <span id="MY_PAGE"><a href="MY_PAGE.html" style="font-weight: bold"> My Page &nbsp&nbsp </a></span>
+        <span id="MY_GAMES"><a href="MY_GAMES.html" style="font-weight: bold"> My Games &nbsp&nbsp</a></span>
+        <span id="COMMUNITY"><a href="COMMUNITY.html" style="font-weight: bold"> Community &nbsp&nbsp</a></span>
+        <span id="SUPPORT"><a href="SUPPORT.html" style="font-weight: bold"> Support &nbsp&nbsp</a></span>
+    </div>
+
+    <div id="CLIENT">
+        <span id="SIGN_UP"><a href="SIGN_UP.html" style="font-weight: bold; font-size:17px;"> sign up </a></span>
+        <span>&nbsp&nbsp</span>
+        <span id="LOG_IN"><a href="LOG_IN.html" style="font-weight: bold; font-size:17px;"> login </a></span>
     </div>
 
     <div id="LEFT_SIDE">
         <div id="SEARCH_BAR">
             SEARCH_BAR
         </div>
-        <div id="LOGIN_BOX">
-            <div id="ID">
-                <p>ID</p>
-            </div>
-            <div id="PW">
-                <p>PW</p>
-            </div>
+
+
+        <div class="SIDE_BAR">
+            <a href="LIVE_SEARCH.html" style="font-weight: bold">LIVE SEARCH</a>
+            <br>
+            <br>
+            <a href="POPULAR_GAMES.html" style="font-weight: bold">POPULAR GAMES</a>
+            <br>
+            <br>
+            <a href="SALE_GAMES.html" style="font-weight: bold">SALE GAMES</a>
+            <br>
+            <br>
+            <a href="FREE_TO_PLAY.html" style="font-weight: bold">FREE TO PLAY</a>
         </div>
 
-        <div id="SIDE_BAR">
-            <div id="LIVE_SEARCH">
-                <p>LIVE_SEARCH</p>
-            </div>
-            <div id="GAME_RANKING">
-                <p>GAME_RANKING</p>
-            </div>
-            <div id="SALE_GAME">
-                <p>SALE_GAME</p>
-            </div>
 
-            <div id="ETC....">
-                <p>ETC....</p>
-            </div>
-        </div>
+
+
     </div>
-
 
     <div id="RIGHT_SIDE">
         <div class="MOVING_SCREEN">
+            <p style="font-family: 'Calibri Light'; color:white; margin-left:40px; font-weight: bold; font-size:20px;">BEST SELLER</p>
             <input type="radio" name="slide" id="slide1" checked>
             <input type="radio" name="slide" id="slide2">
             <input type="radio" name="slide" id="slide3">
-
             <div class="slidewrap">
                 <ul class="slidelist">
                     <li>
@@ -247,26 +229,11 @@
                     </li>
                 </ul>
             </div>
-
         </div>
-
-
-
-
-
-        <div id="MOVING_SCREEN_2">
-            <!--<p>MOVING_SCREEN_2</p>-->
+        <p style="font-family: 'Calibri Light'; color:white; margin-left:40px; font-weight: bold; font-size:20px;">STREAMING</p>
+        <div class="MOVING_SCREEN_2">
+            <iframe width="1280px" height="720px" frameborder="0" src="https://www.youtube.com/embed/UbzcSFcaNYU?autoplay=1"></iframe>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>
